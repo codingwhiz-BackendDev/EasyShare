@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyShare</title>
+    <link rel="stylesheet" href="{% static 'main_style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        {% for message in messages %}
+        <div class="alert">
+            <p>{{ message }}</p>
+        </div>
+        {% endfor %}
+        <h1>Easy<span>Share</span></h1>
+        <p>Share your files quickly, safely, and instantly.</p>
+        <p>Share All types of files including Apps</p>
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="fileBox">
+                {% csrf_token %}
+                <input type="file" name="file" required>
+                <div class="fileDescription">
+                    <h4>Drag & drop files or click to select</h4>
+                    <h6>Maximum size: 400MB</h6>
+                </div>
+            </div>
+            <button class="btn" type="submit">Generate Link</button>
+        </form>
+
+        <br><br>
+
+        <p>Made with ❤️ by <strong>Emmanuel Oluyemi (Coding Whiz)</strong></p>
+        <div class="social-links">
+            <a href="https://github.com/codingwhiz-BackendDev" target="_blank" aria-label="GitHub">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/emmanuel-oluyemi-9116a4300/" target="_blank" aria-label="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://portfolio1-gray-two.vercel.app" target="_blank" aria-label="Portfolio">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User" class="icon">
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

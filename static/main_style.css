@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fa5b0f;
+    margin-bottom: 15px;
+}
+
+.container h1 span {
+    color: #fff;
+}
+
+.container p {
+    font-size: 18px;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+
+.alert {
+    background-color: #fa5b0f;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.fileBox {
+    width: 100%;
+    padding: 25px;
+    border: 2px dashed #fa5b0f;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #34495e;
+}
+
+.fileBox input[type="file"] {
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
+.fileDescription h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ecf0f1;
+}
+
+.fileDescription h6 {
+    color: #95a5a6;
+    font-size: 14px;
+}
+
+.btn {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 40px;
+    color: white;
+    border-radius: 40px;
+    background: #fa5b0f;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .fileBox {
+        padding: 20px;
+    }
+
+    .fileBox input[type="file"] {
+        width: 90%;
+    }
+}
+
+
+
+
+/* Add this to your existing CSS file or create a new one */
+
+.fileDetails {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: #34495e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fileDetails p {
+    font-size: 18px;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+}
+
+.downloadBtn {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 40px;
+    color: white;
+    border-radius: 40px;
+    background: #fa5b0f;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.downloadBtn:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+
+.backBtn {
+    margin-top: 30px;
+}
+
+.backBtn .btn {
+    background: #95a5a6;
+    padding: 12px 40px;
+}
+
+.backBtn .btn:hover {
+    background: #7f8c8d;
+    transform: scale(1.05);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.social-links .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links .icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}

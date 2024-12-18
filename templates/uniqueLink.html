@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Details - EasyShare</title>
+    <link rel="stylesheet" href="{% static 'main_style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>File Details</h1>
+
+        <div class="fileDetails">
+            <p><strong>File Name:</strong> {{ fileInfo.fileName }}</p>
+            <p><strong>File Size:</strong> {{ fileInfo.fileSize }} MB</p>
+            <p><strong>Uploaded On:</strong> {{ fileInfo.timeUploaded|date:"F j, Y, g:i a" }}</p>
+            <p><strong>File Type:</strong> {{ fileInfo.fileType }}</p>
+
+            <div>
+                <a href="{{ fileInfo.file.url }}" class="btn downloadBtn" download>Download File</a>
+            </div>
+        </div>
+
+        <div class="backBtn">
+            <a href="/" class="btn">Home Page</a>
+        </div>
+
+        <button class="btn" onclick="copyUrl()">Copy Link</button>
+
+        <br><br>
+
+        <p>Made with ❤️ by <strong>Emmanuel Oluyemi (Coding Whiz)</strong></p>
+        <div class="social-links">
+            <a href="https://github.com/codingwhiz-BackendDev" target="_blank" aria-label="GitHub">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/emmanuel-oluyemi-9116a4300/" target="_blank" aria-label="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://portfolio1-gray-two.vercel.app" target="_blank" aria-label="Portfolio">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User" class="icon">
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        function copyUrl() { 
+            const tempInput = document.createElement('input');
+            tempInput.value = window.location.href; 
+            document.body.appendChild(tempInput); 
+            tempInput.select(); 
+            document.execCommand('copy'); 
+            document.body.removeChild(tempInput); 
+            alert('URL Copied: ' + tempInput.value);
+        }
+    </script>
+</body>
+
+</html>
